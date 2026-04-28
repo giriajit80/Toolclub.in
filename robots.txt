@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://toolclub.in/sitemap.xml
+
+# Block irrelevant paths
+Disallow: /api/
+Disallow: /*.json$

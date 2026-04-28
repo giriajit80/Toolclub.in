@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Palette Preview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0; padding: 40px;
+      font-family: 'Inter', sans-serif;
+      background: #E2E8F0;
+      color: #0F172A;
+    }
+    h1 {
+      text-align: center;
+      font-family: 'Outfit', sans-serif;
+      margin-bottom: 40px;
+    }
+    .themes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    /* Base UI definitions for preview */
+    .preview-card {
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      transition: all 0.3s ease;
+    }
+    .preview-card:hover {
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+      transform: translateY(-4px);
+    }
+    .p-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem;
+      margin: 0 0 8px 0;
+    }
+    .p-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0 0 24px 0;
+    }
+    .p-surface {
+      background: var(--surface);
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+    .p-button {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      box-shadow: 0 4px 14px var(--primary-glow);
+      display: inline-block;
+    }
+    .p-badge {
+      background: var(--primary-glow);
+      color: var(--primary);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+
+    /* THEME 1: Midnight Violet */
+    .theme-1 {
+      --primary:       #7C3AED;
+      --primary-dark:  #5B21B6;
+      --primary-light: #C4B5FD;
+      --primary-glow:  rgba(124, 58, 237, 0.2);
+      --bg:            #FAFAFA;
+      --bg-2:          #F5F3FF;
+      --surface:       #FFFFFF;
+      --border:        #E5E7EB;
+      --text:          #09090B;
+      --text-muted:    #6B7280;
+    }
+
+    /* THEME 2: Sunset Coral */
+    .theme-2 {
+      --primary:       #FA5252;
+      --primary-dark:  #E03131;
+      --primary-light: #FFC9C9;
+      --primary-glow:  rgba(250, 82, 82, 0.2);
+      --bg:            #F8F9FA;
+      --bg-2:          #FFF5F5;
+      --surface:       #FFFFFF;
+      --border:        #E9ECEF;
+      --text:          #212529;
+      --text-muted:    #868E96;
+    }
+
+    /* THEME 3: Oceanic Teal */
+    .theme-3 {
+      --primary:       #0CA678;
+      --primary-dark:  #087F5B;
+      --primary-light: #B2F2BB;
+      --primary-glow:  rgba(12, 166, 120, 0.2);
+      --bg:            #F8FAFC;
+      --bg-2:          #E6FCF5;
+      --surface:       #FFFFFF;
+      --border:        #E2E8F0;
+      --text:          #0F172A;
+      --text-muted:    #64748B;
+    }
+
+    /* THEME 4: Dark Mode Prototype (Midnight Violet) */
+    .theme-dark {
+      --primary:       #8B5CF6;
+      --primary-dark:  #7C3AED;
+      --primary-light: #DDD6FE;
+      --primary-glow:  rgba(139, 92, 246, 0.25);
+      --bg:            #09090B;
+      --bg-2:          #111117;
+      --surface:       #18181F;
+      --border:        #27272A;
+      --text:          #F4F4F5;
+      --text-muted:    #A1A1AA;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>🎨 ToolClub Color Themes Preview</h1>
+  
+  <div class="themes-grid">
+
+    <!-- Option 1 -->
+    <div class="preview-card theme-1">
+      <span class="p-badge">Option 1</span>
+      <h2 class="p-title">Midnight Violet</h2>
+      <p class="p-desc">Sleek, high-end SaaS feel. Deep violet contrasting with crisp whites.</p>
+      <div class="p-surface">
+        <h3 style="margin-top:0">PDF Compressor</h3>
+        <p class="p-desc">Reduce file size without quality loss.</p>
+        <button class="p-button">Upload File &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Option 2 -->
+    <div class="preview-card theme-2">
+      <span class="p-badge">Option 2</span>
+      <h2 class="p-title">Sunset Coral</h2>
+      <p class="p-desc">Dynamic, vibrant, and energetic. Perfect for rapid utility tools.</p>
+      <div class="p-surface">
+        <h3 style="margin-top:0">Image Crop & Rotate</h3>
+        <p class="p-desc">Edit your images instantly in browser.</p>
+        <button class="p-button">Upload Image &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Option 3 -->
+    <div class="preview-card theme-3">
+      <span class="p-badge">Option 3</span>
+      <h2 class="p-title">Oceanic Teal</h2>
+      <p class="p-desc">Fresh, clean, and highly trustworthy. Excellent for file handling apps.</p>
+      <div class="p-surface">
+        <h3 style="margin-top:0">EMI Calculator</h3>
+        <p class="p-desc">Calculate your precise monthly instalments.</p>
+        <button class="p-button">Calculate &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Option 1 Dark Mode -->
+    <div class="preview-card theme-dark">
+      <span class="p-badge">Preview (Dark)</span>
+      <h2 class="p-title">Midnight Violet (Dark)</h2>
+      <p class="p-desc">How Option 1 translates into the beautiful dark mode setup.</p>
+      <div class="p-surface">
+        <h3 style="margin-top:0">Resume Maker</h3>
+        <p class="p-desc">Generate professional standard resumes entirely locally.</p>
+        <button class="p-button">Start Building &rarr;</button>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
